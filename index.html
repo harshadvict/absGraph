@@ -9,7 +9,9 @@
     <canvas id="myChart"></canvas>
   </div>
   <script>
-    
+    console.log(window.location.href.split('?')[1].split('&')[0].split('=')[1]),"location");
+    console.log(decodeURI(window.location.href.split('?')[1].split('&')[0].split('=')[1]),"decode uri");
+    console.log(JSON.parse(decodeURI(window.location.href.split('?')[1].split('&')[0].split('=')[1])),"parse log");
     var config = JSON.parse(decodeURI(window.location.href.split('?')[1].split('&')[0].split('=')[1]));
     console.log(config,'config');
     var myChart = new Chart(
